@@ -7,7 +7,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 
-<title>Lista de Motoristas</title>
+<title>Lista de Passageiros</title>
 
 <link th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}"
 	rel="stylesheet" />
@@ -17,14 +17,14 @@
 
 <body>
 
-<br>
+	<br>
 
 	<ul class="nav nav-pills nav-fill">
 
-		<li class="nav-item"><a class="nav-link active"
-			href="/motoristas">Motoristas</a></li>
+		<li class="nav-item"><a class="nav-link" href="/motoristas">Motoristas</a></li>
 
-		<li class="nav-item"><a class="nav-link" href="/passageiros">Passageiros</a></li>
+		<li class="nav-item"><a class="nav-link active"
+			href="/passageiros">Passageiros</a></li>
 
 		<li class="nav-item"><a class="nav-link" href="/corridas">Corridas</a></li>
 
@@ -32,16 +32,17 @@
 
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<h3 class="panel-title" align="center">Lista de Motoristas</h3>
+			<h3 class="panel-title"align="center">Lista de Passageiros</h3>
 
 			<ul class="nav nav-pills nav-fill">
 
-				<li class="nav-item"><a class="nav-link active" href="/adicionarMotorista">Adicionar Motorista</a></li>
+				<li class="nav-item"><a class="nav-link active"
+					href="/adicionarPassageiro">Adicionar Passageiro</a></li>
 
 			</ul>
-
-		</div>
 		<br>
+		</div>
+		</div>
 		<div class="panel-body">
 			<table class="table">
 				<thead>
@@ -49,21 +50,17 @@
 						<th>#ID</th>
 						<th>Nome</th>
 						<th>CPF</th>
-						<th>Modelo do Carro</th>
 						<th>Data de Nascimento</th>
 						<th>Sexo</th>
-						<th>Status</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr th:each="motorista : ${motoristas}">
-						<td th:text="${motorista.id}"></td>
-						<td th:text="${motorista.nome}"></td>
-						<td th:text="${motorista.cpf}"></td>
-						<td th:text="${motorista.modeloCarro}"></td>
-						<td th:text="${motorista.dataNascimento}"></td>
-						<td th:text="${motorista.Sexo}"></td>
-						<td th:text="${motorista.status}"></td>
+					<tr th:each="passageiro : ${passageiros}">
+						<td th:text="${passageiro.id}"></td>
+						<td th:text="${passageiro.nome}"></td>
+						<td th:text="${passageiro.cpf}"></td>
+						<td th:text="${passageiro.dataNascimento}"></td>
+						<td th:text="${passageiro.Sexo}"></td>
 					</tr>
 				</tbody>
 			</table>
@@ -73,6 +70,7 @@
 
 	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
 	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
 </body>
 
 

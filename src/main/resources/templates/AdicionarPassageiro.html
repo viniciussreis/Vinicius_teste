@@ -1,0 +1,63 @@
+<!Doctype HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+
+<title>Cadastro de Passageiros</title>
+
+<link th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}"
+	rel="stylesheet" />
+<link th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap-theme.min.css}"
+	rel="stylesheet" />
+</head>
+
+<body>
+
+		<form>
+		<div class="form-group">
+		
+			<label for="Nome" >Nome</label> 
+			<input type="nome" class="form-control" id="nome"
+				placeholder="Insira o Nome" th:field="">
+				
+		</div>
+		
+		<div class="form-group">
+		
+			<label for="CPF" >CPF</label> 
+			<input type="number" class="form-control" id="cpf"
+				   placeholder="Insira o CPF" maxlength="12">
+		</div>
+		
+		<div class="form-group">
+		
+			<label for="ModeloCarro" >Data</label> 
+			<input type="date" class="form-control" id="modeloCarro">
+				
+		</div>
+
+		<div class="form-group">
+			<label for="Sexo">Sexo</label> <select class="form-control"
+				id="sexo">
+				<option>Masculino</option>
+				<option>Feminino</option>
+			</select>
+		</div>
+
+
+		<ul class="nav nav-pills nav-fill">
+			<li class="nav-item"><a class="nav-link active" href="/passageiros">Adicionar Passageiro</a></li>
+		</ul>
+	</form>
+
+	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+
+
+</html>
