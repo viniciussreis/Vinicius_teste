@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -35,6 +36,11 @@ public class MotoristasController {
 	public String salvar(Motorista motorista) {
 		this.motoristas.save(motorista);
 		return "redirect:/motoristas";
+	}
+	
+	@GetMapping("/motoristas/alterar/{id}")
+	public ModelAndView alterarForm(@PathVariable("id") Motorista motorista) {
+		return new ModelAndView("adicionarMotorista", "motorista", motorista);
 	}
 
 }

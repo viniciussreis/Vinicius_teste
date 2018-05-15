@@ -16,6 +16,9 @@
 <body>
 
 	<form method="POST" th:object="${motorista}" th:action="@{/motoristas}">
+	
+		<input type="hidden" th:field="*{id}" />
+		
 		<div class="form-group">
 
 			<label for="Nome">Nome</label> 
@@ -54,7 +57,7 @@
 				<option value="Inativo">Inativo</option>
 			</select>
 		</div>
-
+		
 		<button type="submit" class="btn btn-primary btn-block btn-lg">Gravar</button>
 
 	</form>

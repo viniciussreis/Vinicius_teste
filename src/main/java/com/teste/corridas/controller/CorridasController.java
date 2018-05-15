@@ -31,7 +31,7 @@ public class CorridasController {
 		ModelAndView modelAndView = new ModelAndView("ListaCorridas");
 		modelAndView.addObject("corridas", corridas.findAll());
 		modelAndView.addObject("corrida", new Corrida());
-		modelAndView.addObject("motoristas", motoristas.findAll());
+		modelAndView.addObject("motoristas", motoristas.buscarAtivo());
 		modelAndView.addObject("passageiros", passageiros.findAll());
 		return modelAndView;
 	}
@@ -41,5 +41,6 @@ public class CorridasController {
 		this.corridas.save(corrida);
 		return "redirect:/corridas";
 	}
-
+		
+	
 }

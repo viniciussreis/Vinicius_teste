@@ -53,7 +53,7 @@
 				<tbody>
 					<tr th:each="motorista : ${motoristas}">
 						<td th:text="${motorista.id}"></td>
-						<td th:text="${motorista.nome}"></td>
+						<td ><a th:href="@{'/motoristas/alterar/'+${motorista.id}}" th:text="${motorista.nome}"></a></td>
 						<td th:text="${motorista.cpf}"></td>
 						<td th:text="${motorista.modeloCarro}"></td>
 						<td th:text="${motorista.dataNascimento}"></td>
