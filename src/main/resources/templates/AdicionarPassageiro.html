@@ -4,46 +4,40 @@
 	xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width" />
-
-<title>Cadastro de Passageiros</title>
-
-<link th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}"
-	rel="stylesheet" />
-<link th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap-theme.min.css}"
-	rel="stylesheet" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	
+	<title>Cadastro de Passageiros</title>
+	
+	<link th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}" rel="stylesheet" />
+	<link th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap-theme.min.css}" rel="stylesheet" />
 </head>
 
 <body>
 
-	<form method="POST" th:object="${passageiro}"
-		th:action="@{/passageiros}">
+	<form method="POST" th:object="${passageiro}" th:action="@{/passageiros}">
+	
 		<div class="form-group">
-
-			<label for="nome">Nome</label> <input type="text"
-				class="form-control" id="nome" placeholder="Insira o Nome"
-				th:field="*{nome}" required>
-
+			<label for="nome">Nome</label> 
+			<input type="text" class="form-control" id="nome" placeholder="Insira o Nome" th:field="*{nome}" required>
 		</div>
 
 		<div class="form-group">
 
-			<label for="CPF">CPF</label> <input type="number"
-				class="form-control" id="cpf" placeholder="Insira o CPF"
-				maxlength="12" th:field="*{cpf}" required>
+			<label for="CPF">CPF</label> 
+			<input type="number" class="form-control" id="cpf" placeholder="Insira o CPF" maxlength="12" th:field="*{cpf}" required>
 		</div>
 
 		<div class="form-group">
 
-			<label for="data">Data</label> <input type="date"
-				class="form-control" id="data" th:field="*{dataNascimento}" required>
+			<label for="data">Data</label> 
+			<input type="date" class="form-control" id="data" th:field="*{dataNascimento}" required>
 
 		</div>
 
 		<div class="form-group">
-			<label for="sexo">Sexo</label> <select class="form-control" id="sexo"
-				th:field="*{sexo}" required>
+			<label for="sexo">Sexo</label> 
+			<select class="form-control" id="sexo" th:field="*{sexo}" required>
 				<option value="Masculino">Masculino</option>
 				<option value="Feminino">Feminino</option>
 			</select>
