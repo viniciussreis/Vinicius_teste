@@ -17,41 +17,41 @@
 
 <body>
 
-		<form>
+	<form method="POST" th:object="${passageiro}"
+		th:action="@{/passageiros}">
 		<div class="form-group">
-		
-			<label for="Nome" >Nome</label> 
-			<input type="nome" class="form-control" id="nome"
-				placeholder="Insira o Nome" th:field="">
-				
-		</div>
-		
-		<div class="form-group">
-		
-			<label for="CPF" >CPF</label> 
-			<input type="number" class="form-control" id="cpf"
-				   placeholder="Insira o CPF" maxlength="12">
-		</div>
-		
-		<div class="form-group">
-		
-			<label for="ModeloCarro" >Data</label> 
-			<input type="date" class="form-control" id="modeloCarro">
-				
+
+			<label for="nome">Nome</label> <input type="text"
+				class="form-control" id="nome" placeholder="Insira o Nome"
+				th:field="*{nome}">
+
 		</div>
 
 		<div class="form-group">
-			<label for="Sexo">Sexo</label> <select class="form-control"
-				id="sexo">
-				<option>Masculino</option>
-				<option>Feminino</option>
+
+			<label for="CPF">CPF</label> <input type="number"
+				class="form-control" id="cpf" placeholder="Insira o CPF"
+				maxlength="12" th:field="*{cpf}">
+		</div>
+
+		<div class="form-group">
+
+			<label for="data">Data</label> <input type="date"
+				class="form-control" id="data" th:field="*{dataNascimento}">
+
+		</div>
+
+		<div class="form-group">
+			<label for="sexo">Sexo</label> <select class="form-control" id="sexo"
+				th:field="*{sexo}">
+				<option value="Masculino">Masculino</option>
+				<option value="Feminino">Feminino</option>
 			</select>
 		</div>
 
 
-		<ul class="nav nav-pills nav-fill">
-			<li class="nav-item"><a class="nav-link active" href="/passageiros">Adicionar Passageiro</a></li>
-		</ul>
+		<button type="submit" class="btn btn-primary btn-block btn-lg">Gravar</button>
+
 	</form>
 
 	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>

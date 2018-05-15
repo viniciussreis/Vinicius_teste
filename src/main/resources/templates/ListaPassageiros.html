@@ -32,7 +32,7 @@
 
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<h3 class="panel-title"align="center">Lista de Passageiros</h3>
+			<h3 class="panel-title" align="center">Lista de Passageiros</h3>
 
 			<ul class="nav nav-pills nav-fill">
 
@@ -40,33 +40,31 @@
 					href="/adicionarPassageiro">Adicionar Passageiro</a></li>
 
 			</ul>
-		<br>
-		</div>
-		</div>
-		<div class="panel-body">
-			<table class="table">
-				<thead>
-					<tr>
-						<th>#ID</th>
-						<th>Nome</th>
-						<th>CPF</th>
-						<th>Data de Nascimento</th>
-						<th>Sexo</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr th:each="passageiro : ${passageiros}">
-						<td th:text="${passageiro.id}"></td>
-						<td th:text="${passageiro.nome}"></td>
-						<td th:text="${passageiro.cpf}"></td>
-						<td th:text="${passageiro.dataNascimento}"></td>
-						<td th:text="${passageiro.Sexo}"></td>
-					</tr>
-				</tbody>
-			</table>
+			<br>
 		</div>
 	</div>
-
+	<div class="panel-body">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>#ID</th>
+					<th>Nome</th>
+					<th>CPF</th>
+					<th>Data de Nascimento</th>
+					<th>Sexo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="passageiro : ${passageiros}">
+					<td th:text="${passageiro.id}"></td>
+					<td th:text="${passageiro.nome}"></td>
+					<td th:text="${passageiro.cpf}"></td>
+					<td th:text="${passageiro.dataNascimento}"></td>
+					<td th:text="${passageiro.Sexo}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
 	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
 	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>

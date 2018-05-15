@@ -12,6 +12,7 @@ public class Corrida extends EntidadeGenerica {
 	private Motorista motorista;	
 	@ManyToOne
 	private Passageiro passageiro;
+	
 	private Double valor;
 
 	public Motorista getMotorista() {
