@@ -1,0 +1,1 @@
+web: java -jar target/sistema-corridas.jar --spring.config.location=classpath:heroku-db.properties
