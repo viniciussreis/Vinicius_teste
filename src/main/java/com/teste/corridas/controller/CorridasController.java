@@ -1,6 +1,7 @@
 package com.teste.corridas.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import com.teste.corridas.repository.Corridas;
 import com.teste.corridas.repository.Motoristas;
 import com.teste.corridas.repository.Passageiros;
 
+@Controller
 @RequestMapping("/corridas")
 public class CorridasController {
 
@@ -23,7 +25,7 @@ public class CorridasController {
 	@Autowired
 	private Passageiros passageiros;
 
-	@GetMapping("/")
+	@GetMapping
 	public ModelAndView listar() {
 
 		ModelAndView modelAndView = new ModelAndView("ListaCorridas");

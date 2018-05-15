@@ -22,7 +22,7 @@
 
 			<label for="Nome">Nome</label> <input type="text"
 				class="form-control" id="nome" placeholder="Insira o Nome"
-				th:field="*{nome}">
+				th:field="*{nome}" required>
 
 		</div>
 
@@ -30,27 +30,27 @@
 
 			<label for="CPF">CPF</label> <input type="number"
 				class="form-control" id="cpf" placeholder="Insira o CPF"
-				maxlength="12" th:field="*{cpf}">
+				maxlength="12" th:field="*{cpf}" required>
 		</div>
 
 		<div class="form-group">
 
 			<label>Modelo do Carro</label> <input type="text"
 				class="form-control" placeholder="Insira o Modelo do Carro"
-				th:field="*{modeloCarro}">
+				th:field="*{modeloCarro}" required>
 
 		</div>
 
 		<div class="form-group">
 
 			<label for="data">Data</label> <input type="date"
-				class="form-control" id="data" th:field="*{dataNascimento}">
+				class="form-control" id="data" th:field="*{dataNascimento}" required>
 
 		</div>
 
 		<div class="form-group">
 			<label for="sexo">Sexo:</label> <select class="form-control"
-				id="sexo" th:field="*{sexo}">
+				id="sexo" th:field="*{sexo}" required>
 				<option value="Masculino">Masculino</option>
 				<option value="Feminino">Feminino</option>
 			</select>
@@ -58,7 +58,7 @@
 
 		<div class="form-group">
 			<label for="Status">Status:</label> <select class="form-control"
-				id="status" th:field="*{status}">
+				id="status" th:field="*{status}" required>
 				<option value="Ativo">Ativo</option>
 				<option value="Inativo">Inativo</option>
 			</select>

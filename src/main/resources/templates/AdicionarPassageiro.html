@@ -23,7 +23,7 @@
 
 			<label for="nome">Nome</label> <input type="text"
 				class="form-control" id="nome" placeholder="Insira o Nome"
-				th:field="*{nome}">
+				th:field="*{nome}" required>
 
 		</div>
 
@@ -31,19 +31,19 @@
 
 			<label for="CPF">CPF</label> <input type="number"
 				class="form-control" id="cpf" placeholder="Insira o CPF"
-				maxlength="12" th:field="*{cpf}">
+				maxlength="12" th:field="*{cpf}" required>
 		</div>
 
 		<div class="form-group">
 
 			<label for="data">Data</label> <input type="date"
-				class="form-control" id="data" th:field="*{dataNascimento}">
+				class="form-control" id="data" th:field="*{dataNascimento}" required>
 
 		</div>
 
 		<div class="form-group">
 			<label for="sexo">Sexo</label> <select class="form-control" id="sexo"
-				th:field="*{sexo}">
+				th:field="*{sexo}" required>
 				<option value="Masculino">Masculino</option>
 				<option value="Feminino">Feminino</option>
 			</select>
